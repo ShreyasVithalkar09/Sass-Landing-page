@@ -1,0 +1,81 @@
+@import 'colors';
+@import './media-queries';
+
+.navbar{
+    // border: 1px solid red;
+    // padding: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 10vh;
+    
+
+    @include phablet{
+        padding: 0 1rem;
+    }
+
+    
+    &_logo a {
+        text-decoration: none;
+        color: $logo;
+        font-weight: 1000;
+        font-size: 1.2rem;
+      
+    }
+
+
+    &_menu .btn{
+        border: 1px solid $primary;
+        color: $primary;
+        padding: 1rem 1.5rem;
+        text-decoration: none;
+        margin-left: 1rem;
+
+        &:hover{
+            border: none;
+            background-color: $secondary;
+            color: $light;
+            transition: all 0.4s ease;
+        }
+
+        @include tablet{
+            display: none;
+        }
+
+
+    }
+    
+
+    &_menu .links{
+       margin-left: 1rem;
+       text-decoration: none;
+       font-size: 1.2rem;
+       color: $semi_dark;
+     
+
+
+       &:hover{
+           color: $secondary;
+           transition: all 0.4s ease;
+           font-weight: 800;
+       }
+        
+
+       @include tablet{
+           display: none;
+       }
+    }
+
+
+    &_icon{
+        display: none;
+       
+        @include tablet{
+            display: block;
+            font-size: 1.3rem;
+        }
+
+       
+    }
+}
+
